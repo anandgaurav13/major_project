@@ -1,0 +1,30 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+.page h1 {
+  margin: 0 0 0.75rem;
+  color: var(--heading);
+}
+
+.query {
+  color: var(--text-secondary);
+  margin: 0 0 1rem;
+}
+
+.result {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+
+.back {
+  color: var(--primary);
+  font-weight: 600;
+}

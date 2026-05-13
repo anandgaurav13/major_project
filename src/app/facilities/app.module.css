@@ -1,0 +1,174 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  color: var(--heading);
+  font-size: 1.75rem;
+}
+
+.header p {
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+.subheading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0 1rem;
+  color: var(--heading);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.cardTop {
+  padding: 1.25rem;
+  color: #fff;
+}
+
+.cardTop h3 {
+  margin: 0.5rem 0 0.15rem;
+}
+
+.cardTop small {
+  opacity: 0.85;
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgb(255 255 255 / 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.cardBody {
+  padding: 1rem 1.25rem 1.25rem;
+  color: var(--text-secondary);
+}
+
+.cardBody p {
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  margin: 0.15rem 0.25rem 0 0;
+  border: 1px solid var(--border);
+}
+
+.gradBlue {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.gradPurple {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+.gradGreen {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .splitGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.splitCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+@media (min-width: 640px) {
+  .splitCard {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+.media {
+  min-height: 180px;
+}
+
+.mediaLib {
+  background: linear-gradient(160deg, #1d4ed8, #38bdf8);
+}
+
+.mediaSports {
+  background: linear-gradient(160deg, #047857, #34d399);
+}
+
+.splitBody {
+  padding: 1.25rem;
+}
+
+.roundIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.splitBody h3 {
+  margin: 0 0 0.35rem;
+  color: var(--heading);
+}
+
+.splitBody p {
+  margin: 0 0 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.splitBody small {
+  color: var(--text-secondary);
+}

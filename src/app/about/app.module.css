@@ -1,0 +1,205 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.header h1 {
+  margin: 0 0 0.35rem;
+  color: var(--heading);
+  font-size: 1.75rem;
+}
+
+.header p {
+  margin: 0 0 1.5rem;
+  color: var(--text-secondary);
+}
+
+.heroCard {
+  background: var(--surface);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.heroImg {
+  height: 240px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6 50%, #93c5fd);
+}
+
+html[data-theme="dark"] .heroImg {
+  background: linear-gradient(135deg, #0c1929, #1e3a8a 50%, #334155);
+}
+
+.heroBody {
+  padding: 1.5rem;
+}
+
+.titleRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.round {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.roundSm {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBody h2 {
+  margin: 0 0 0.25rem;
+  color: var(--heading);
+  font-size: 1.2rem;
+}
+
+.loc {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.text {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.gradBlue {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+}
+
+.gradPurple {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+
+.gradGreen {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .metrics {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.metric {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.metric i {
+  color: var(--primary);
+  font-size: 1.75rem;
+}
+
+.metric h3 {
+  margin: 0.35rem 0 0.15rem;
+  color: var(--primary);
+}
+
+.metric small {
+  color: var(--text-secondary);
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.panel {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.panel h3 {
+  margin: 0;
+  color: var(--heading);
+}
+
+.panel p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.trio {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .trio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tile {
+  border-radius: 16px;
+  padding: 1.25rem;
+  color: #fff;
+}
+
+.tile i {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 0.35rem;
+}
+
+.tile h4 {
+  margin: 0 0 0.35rem;
+}
+
+.tile small {
+  color: rgb(255 255 255 / 0.85);
+  line-height: 1.45;
+}
