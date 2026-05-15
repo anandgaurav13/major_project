@@ -88,6 +88,13 @@
   color: var(--heading);
 }
 
+.studyHint {
+  margin: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: var(--accent, #0084ff);
+  font-weight: 500;
+}
+
 .field {
   display: flex;
   flex-direction: column;

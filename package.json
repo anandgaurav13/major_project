@@ -2,11 +2,15 @@
   "name": "bbau-smart-campus-mapping",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <23"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "puppeteer:install": "puppeteer browsers install chrome"
   },
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",

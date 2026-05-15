@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { getStudyInfo } from "@/lib/studyInfo";
 import styles from "./app.module.css";
 
 const STEPS = [
@@ -17,7 +18,9 @@ export default function LoginPage() {
   const [error,   setError]   = useState<string | null>(null);
   const [loading, setLoading] = useState<"student" | "admin" | null>(null);
   const [stepIdx, setStepIdx] = useState(0);
+  const [enrollment, setEnrollment] = useState("");
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const studyPreview = getStudyInfo(enrollment.trim());
 
   // Cycle through progress messages while student login is in flight
   useEffect(() => {
@@ -65,6 +68,7 @@ export default function LoginPage() {
       // Persist scraped data for the student page
       sessionStorage.setItem("bbau_student_data", JSON.stringify(json.data));
       router.push("/student");
+      router.refresh();
     } catch (err: unknown) {
       clearTimeout(timer);
       const isAbort = err instanceof Error && err.name === "AbortError";
@@ -118,11 +122,24 @@ export default function LoginPage() {
           <form className={styles.card} onSubmit={submitStudent}>
             <h2>Student login</h2>
             <label className={styles.field}>
-              <span>Username</span>
+              <span>Enrollment ID</span>
               <div className={styles.inputRow}>
                 <i className="bi bi-person" aria-hidden />
-                <input name="username" placeholder="Student username" required autoComplete="username" />
+                <input
+                  name="username"
+                  placeholder="e.g. XX1/XX"
+                  required
+                  autoComplete="username"
+                  value={enrollment}
+                  onChange={(e) => setEnrollment(e.target.value)}
+                />
               </div>
+              {studyPreview.yearOfStudy != null && (
+                <p className={styles.studyHint}>
+                  Year {studyPreview.yearOfStudy}
+                  {studyPreview.semester != null ? ` · Semester ${studyPreview.semester}` : ""}
+                </p>
+              )}
             </label>
             <label className={styles.field}>
               <span>Password</span>

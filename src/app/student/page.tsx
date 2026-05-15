@@ -13,6 +13,8 @@ interface Profile {
   course?: string | null;
   department?: string | null;
   semester?: string | null;
+  yearOfStudy?: number | null;
+  admissionYear?: number | null;
   email?: string | null;
   mobile?: string | null;
   category?: string | null;
@@ -46,9 +48,11 @@ export default function StudentPage() {
     try { setData(JSON.parse(raw)); } catch { router.replace("/login"); }
   }, [router]);
 
-  function logout() {
+  async function logout() {
     sessionStorage.removeItem("bbau_student_data");
+    await fetch("/api/auth/logout", { method: "POST" });
     router.push("/login");
+    router.refresh();
   }
 
   /* ── Loading ── */
@@ -160,6 +164,7 @@ export default function StudentPage() {
                   ["Enrollment No", profile.enrollmentNo],
                   ["Course",        profile.course],
                   ["Department",    profile.department],
+                  ["Year of Study", profile.yearOfStudy != null ? String(profile.yearOfStudy) : null],
                   ["Semester",      profile.semester],
                   ["Category",      profile.category],
                   ["Email",         profile.email],
