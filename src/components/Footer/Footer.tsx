@@ -22,6 +22,7 @@ export function Footer() {
               <Link href="/departments">Departments</Link>
               <Link href="/facilities">Facilities</Link>
               <Link href="/bus">Bus Schedule</Link>
+              <Link href="/bbau">BBAU Info Hub</Link>
             </div>
           </div>
           <div>
@@ -29,8 +30,9 @@ export function Footer() {
             <div className={styles.stack}>
               <Link href="/about">About BBAU</Link>
               <Link href="/contact">Contact Us</Link>
-              <span className={styles.disabled}>Admissions</span>
-              <span className={styles.disabled}>Careers</span>
+              <a href="https://www.bbau.ac.in/admissionspg.aspx" target="_blank" rel="noopener noreferrer">Admissions</a>
+              <a href="https://www.bbau.ac.in/Career.aspx" target="_blank" rel="noopener noreferrer">Careers</a>
+              <a href="https://www.bbau.ac.in/PublicNotices.aspx" target="_blank" rel="noopener noreferrer">Notices</a>
             </div>
           </div>
           <div>
@@ -40,14 +42,23 @@ export function Footer() {
               <br />
               Lucknow - 226025, UP
               <br />
-              Phone: +91-522-2440821
+              Toll Free: 1800-180-5789
               <br />
-              Email: info@bbau.ac.in
+              Fax: +91-522-2440821
             </p>
+            <a
+              href="https://www.bbau.ac.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: "0.78rem", color: "var(--footer-muted)", marginTop: "6px", display: "inline-block" }}
+            >
+              www.bbau.ac.in ↗
+            </a>
           </div>
         </div>
         <div className={styles.copy}>
-          © 2026 Babasaheb Bhimrao Ambedkar University, Lucknow. All rights reserved.
+          © 2026 Babasaheb Bhimrao Ambedkar University, Lucknow. All rights reserved. &nbsp;|&nbsp;
+          <a href="https://www.bbau.ac.in/Disclaimer.aspx" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", opacity: 0.7 }}>Disclaimer</a>
         </div>
       </div>
     </footer>
